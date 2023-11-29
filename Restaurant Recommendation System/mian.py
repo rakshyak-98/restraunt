@@ -24,9 +24,9 @@ from nltk.stem.snowball import SnowballStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
-hotel_details=pd.read_csv(r'C:\Users\ASUSU\PycharmProjects\Restaurant Recommendation System\DataSet\Hotel_details.csv')
-hotel_rooms=pd.read_csv(r'C:\Users\ASUSU\PycharmProjects\Restaurant Recommendation System\DataSet\Hotel_Room_attributes.csv')
-hotel_cost=pd.read_csv(r'C:\Users\ASUSU\PycharmProjects\Restaurant Recommendation System\DataSet\hotels_RoomPrice.csv')
+hotel_details=pd.read_csv(r'DataSet\Hotel_details.csv')
+hotel_rooms=pd.read_csv(r'DataSet\Hotel_Room_attributes.csv')
+hotel_cost=pd.read_csv(r'DataSet\hotels_RoomPrice.csv')
 
 hotel_details.head()
 hotel_rooms.head()
