@@ -8,29 +8,12 @@ local.properties
 # Log/OS Files
 *.log
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
 # IntelliJ
 *.iml
 .idea/
 
-# Keystore files
-*.jks
-*.keystore
+#python environment
+.venv
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+Dataset
 
-# Android Profiling
-*.hprof
-
-# env directory
-env/
-venv/
-dist/
-*.egg-info/

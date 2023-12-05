@@ -1,10 +1,9 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='RestRec',
     version='0.0.0.0',
-    packages=find_packages(),
-    install_requires = ['flask_sqlalchemy', 'bcrypt', 'numpy', 'pandas', 'seaborn', 'scikit-learn'],
+    packages=['flask_sqlalchemy', 'bcrypt', 'numpy', 'pandas', 'seaborn', 'scikit-learn'],
     url='',
     license='MIT',
     author='Arnold Anthony',
