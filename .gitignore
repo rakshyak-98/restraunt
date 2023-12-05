@@ -17,3 +17,6 @@ local.properties
 
 Dataset
 
+env/*
+*.egg-info/*
+dist/*
