@@ -17,3 +17,7 @@ local.properties
 
 Dataset
 
+env/*
+*.egg-info/*
+dist/*
+__pycache__/*
