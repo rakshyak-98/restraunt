@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* css variables */
@@ -11,34 +12,19 @@
 
 body{
     background-color:white;
-    background: url(pexels-valeria-boltneva-1639562.jpg) no-repeat center center/cover;
-    width: 90vw;
-    height: 100vh;
 }
+
 /* navigation bar */
 #navbar {
-    padding: 20px;
     display: flex;
     align-items: center;
-    align-self: center;
-    width: 80%;
-    position: sticky;
-    top: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #03030385;
-    border-radius: 50px;
+    background-color: rgba(3, 3, 3, 0.8);
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
-/* #navbar::before {
-    content: "";
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 1.4;
-} */
-
-/* logo and image */
 #logo {
     margin: -15px 0px;
 }
@@ -50,36 +36,33 @@ body{
 
 #navbar ul {
     display: flex;
-    /* font-family: 'Dancing Script', cursive; */
     font-family: 'Arial', cursive;
+    gap: 0 20px;
 }
 
 #navbar ul li {
-    /* color: white; */
     list-style: none;
-    font-size: 2.3rem;    
+    font-size: 1.6rem;
 }
 
 #navbar ul li a {
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    color:rgb(255, 96, 96);
+    color: white;
     text-decoration: none;
-    transition: .3s ease-in-out;
+    border-radius: 4px;
 }
 
 #navbar ul li a:hover {
-    background-color: rgba(255, 96, 96, 0.589);
-    color: rgb(0, 0, 0);
+    color: rgba(255, 96, 96, 0.589);
 }
 
 #user{
     color: rgb(80, 89, 218);
 }
+
 #user :hover{
     color: #030303;
 }
+
 /* home Section */
 #home {
     display: flex;
@@ -87,20 +70,8 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-   
+    background: url("pexels-valeria-boltneva-1639562.jpg") no-repeat center center/cover;
 }
-
-/* #home::before {
-    content: "";
-    
-    position: absolute;
-    height: 100%;
-    width: 100%;
-     z-index: -1;
-    opacity: 0.89; 
-    top: 0px;
-    left: 0px;
-} */
 
 #home h1 {
     color: white;
@@ -137,21 +108,9 @@ services section
 
 /* Client section */
 #clientsection {
-    /* height: 344px; comment for phone*/
-    position: relative;
-    /* border: 2px solid red; */
-}
-
-#clientsection::before {
-    content: "";
-    position: absolute;
     background: url(pexels-chan-walrus-941861.jpg)no-repeat center center/cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 1.8;
-
 }
+
 html{
      scroll-behavior: smooth;/*for smooth scrolling */
 }
