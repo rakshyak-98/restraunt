@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Recommendation</title>
     <link rel="stylesheet" href="../static/css/styledashboard.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <script text="text/javascript" src="../static/script/scroll.js"></script>
 </head>
-<body>
-    
+<body onload="botScroll()">
     <nav id="navbar">
         <div id="logo">
             <img src="logo.jpg" alt="">
@@ -45,17 +44,16 @@
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <button type="submit"  class="submit">Search </button>
+                    <button type="submit"  class="submit"><a href="#clientsection"></a>Search </button>
                 </div>
                 
             </form>
     </section>
 
+    
     <section id="clientsection">
-        <h1 class="primary2">Restaurant In {{ prediction_text}}</h1>
-        <div>
-            {{ table | safe }}
-        </div>
+        {%block content %}
+        {%endblock%}
     </section>
 
     <footer>

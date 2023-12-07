@@ -40,10 +40,14 @@ def register():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
-
+        
+        
         new_user = User(name=name, email=email, password=password)
-        db.session.add(new_user)
-        db.session.commit()
+        try:
+            db.session.add(new_user)
+            db.session.commit()
+        except Exception as error:
+            return render_template('login.html',script = "unique()")
         return redirect('/login')
 
     return render_template('register.html')
@@ -61,17 +65,17 @@ def login():
             session['email'] = user.email
             return redirect('/dashboard')
         else:
-            return render_template('login.html', error='Invalid user')
+            return render_template('login.html', script='absent()')
 
     return render_template('login.html')
 
 
-@app.route('/dashboard')
+@app.route('/dashboard', methods=["GET", "POST"])
 def dashboard():
     if session['email']:
         user = User.query.filter_by(email=session['email']).first()
         return render_template('dashboardnew.html', user=user)
-
+    
     return redirect('/login')
 
 
@@ -89,7 +93,7 @@ def city_based():
     # return render_template("city_hotels.html", prediction_text = "Diabetics {}".format(a))  
     if session['email']:
         user = User.query.filter_by(email=session['email']).first()
-        return render_template('dashboardnew.html', user=user, table=a, prediction_text=format(city))
+        return render_template('table.html', user=user, table=a, prediction_text=format(city))
     # return render_template('dashboardnew.html', table=a)
 
 
