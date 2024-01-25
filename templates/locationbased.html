@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendation</title>
+    <link rel="stylesheet" href="../static/css/locationbased.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+    <script text="text/javascript" src="../static/script/scroll.js"></script>
+</head>
+<body onload="botScroll()">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="../static/css/logo.png" alt="">
+        </div>
+        <ul>
+            <li class="item"><a href="/dashboard">Home</a></li>
+            <li class="item"><a href="#clientsection">Restaurants</a></li>
+            <li class="item"><a href="#clientsection">About Us</a></li>
+            <li class="item"><a href="/dashboard#service">Services</a></li>
+            <li class="item"><a href="/dashboard#contact">Contact Us</a></li>
+        </ul>
+        <ul id="user">
+            <li class="item"><a href="/logout"><div id="user">Logout {{user.name }}</div></a></li>
+            
+        </ul>
+    </nav>
+
+    <section id="home">        
+        <h1 class="primary"> welcomee To Location Locator</h1>
+        <h1 class="primary1">Discover the best food & drinks </h1>
+            <!------------------- login form -------------------------->
+               <form action="/location" method="post">
+                <div class="input-box">
+                    <input type="location" class="input-field"name="location" placeholder="Enter Location Name" required list="script">
+                    <datalist id="script">
+                        <option value="Banashankari"></option>
+                        <option value="Bannerghatta Road"></option>
+                        <option value="Basavanagudi"></option>
+                        <option value="Bellandur"></option> 
+                        <option value="Brigade Road"></option>
+                        <option value="Brookefield"></option>
+                        <option value="BTM"></option>
+                        <option value="Church Street"></option>
+                        <option value="Electronic City"></option>
+                        <option value="Frazer Town"></option>
+                        <option value="HSR"></option>
+                        <option value="Indiranagar"></option>
+                        <option value="JP Nagar"></option>
+                        <option value="Kalyan Nagar"></option>
+                        <option value="Jayanagar"></option>
+                        <option value="Kammanahalli"></option>
+                        <option value="Koramangala 5th Block"></option>
+                        <option value="Koramangala 7th Block"></option>
+                        <option value="Koramangala 4th Block"></option>
+                        <option value="Koramangala 6th Block"></option>
+                        <option value="Lavelle Road"></option>
+                        <option value="Marathahalli"></option>
+                        <option value="New BEL Road"></option>
+                        <option value="Residency Road"></option>
+                        <option value="Rajajinagar"></option>
+                        <option value="MG Road"></option>
+                        <option value="Whitefield"></option>
+                        <option value="Old Airport Road"></option>
+                        <option value="Malleshwaram"></option>
+                        <option value="Sarjapur Road"></option>
+      
+                    </datalist>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <button type="submit"  class="submit"><a href="#clientsection"></a>Search </button>
+                </div>
+                
+            </form>
+    </section>
+
+    
+    <section id="clientsection">
+        {%block content %}
+        {%endblock%}
+    </section>
+
+    <footer>
+        <div class="center">All right service</div>
+    </footer>
+    
+</body>
+</html>

@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 import bcrypt
 import main as m
-
+import main1 as m2
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
@@ -74,7 +74,7 @@ def login():
 def dashboard():
     if session['email']:
         user = User.query.filter_by(email=session['email']).first()
-        return render_template('dashboardnew.html', user=user)
+        return render_template('dashboard.html', user=user)
     
     return redirect('/login')
 
@@ -84,17 +84,86 @@ def logout():
     session.pop('email', None)
     return redirect('/login')
 
+@app.route('/location')
+def location():
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        # return render_template('locationbased.html', user=user)
+        return render_template('newlocation.html', user=user)
+    
+    return redirect('/login')
+@app.route('/rating')
+def rating():
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('rating.html', user=user)
+    
+    return redirect('/login')
+@app.route('/cuisine')
+def cuisine():
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('cuisine.html', user=user)
+    
+    return redirect('/login')
 
+@app.route('/similarrestaurent')
+def similarrestaurent():
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('similarrestaurent.html', user=user)
+    
+    return redirect('/login')
+
+@app.route('/locationsearch', methods=["GET", "POST"])
+def location_based():
+    # Get the city code from the query parameter
+    location= request.form.get('location')
+    a = m.locationbased(location)
+    # return render_template("city_hotels.html", prediction_text = "Diabetics {}".format(a))  
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('table.html', user=user, table=a, prediction_text=format(location))
+ 
 @app.route('/city', methods=["GET", "POST"])
 def city_based():
     # Get the city code from the query parameter
-    city = request.form.get('city')
+    city= request.form.get('city')
     a = m.citybased(city)
     # return render_template("city_hotels.html", prediction_text = "Diabetics {}".format(a))  
     if session['email']:
         user = User.query.filter_by(email=session['email']).first()
         return render_template('table.html', user=user, table=a, prediction_text=format(city))
-    # return render_template('dashboardnew.html', table=a)
+ 
+
+
+@app.route('/similar', methods=["GET", "POST"])
+def similar():
+
+    similar = request.form.get('similar')
+    a = m2.recommend(similar)
+
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('table2.html', user=user, table=a, prediction_text=format(similar))
+    
+
+@app.route('/rate', methods=["GET", "POST"])
+def rate():
+    rate = request.form.get('rate')
+    a = m2.predict_rating_for_restaurant(rate)
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('prediction.html', user=user,prediction_text=format(rate) , prediction_rating=format(a))
+
+@app.route('/cuisinebased', methods=["GET", "POST"])
+def cuisinebased():
+    cuisine = request.form.get('cuisine')
+    a = m.cuisinesbased(cuisine)
+    if session['email']:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('table1.html', user=user, table=a, prediction_text=format(cuisine))
+   
 
 
 if __name__ == '__main__':
