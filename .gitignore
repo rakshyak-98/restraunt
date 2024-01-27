@@ -16,7 +16,10 @@ local.properties
 .venv
 
 Dataset
+__pycache__
+.ipynb_checkpoints/
 
 env/*
 *.egg-info/*
 dist/*
+__pycache__/*
