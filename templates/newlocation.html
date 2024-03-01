@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendation</title>
+    <link rel="stylesheet" href="../static/css/newlocation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap"
+        rel="stylesheet">
+    <script text="text/javascript" src="../static/script/scroll.js"></script>
+</head>
+
+<body onload="botScroll()">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="../static/css/logo.png" alt="">
+        </div>
+        <ul>
+            <li class="item"><a href="/dashboard">Home</a></li>
+            <li class="item"><a href="#clientsection">Restaurants</a></li>
+            <li class="item"><a href="#clientsection">About Us</a></li>
+            <li class="item"><a href="/dashboard#service">Services</a></li>
+            <li class="item"><a href="/dashboard#contact">Contact Us</a></li>
+        </ul>
+        <ul id="user">
+            <li class="item"><a href="/logout">
+                    <div id="user">Logout {{user.name }}</div>
+                </a></li>
+
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="primary"> welcomee To Location Locator</h1>
+        <h1 class="primary1">Discover the best food & drinks </h1>
+
+        <form id="locationForm" method="post" action="/city">
+            <div class="radio-box">
+                <label>
+                    <input id="rad1" type="radio" name="formType" value="city" checked>
+                    <p>City</p>
+                </label>
+                <label>
+                    <input type="radio" name="formType" value="location">
+                    <p>Location</p>
+                </label>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="location" placeholder="Enter Location" required
+                    list="locations" id="locationInput" style="display: none;">
+                <datalist id="locations">
+        
+                    <option value="Banashankari"></option>
+                    <option value="Bannerghatta Road"></option>
+                    <option value="Basavanagudi"></option>
+                    <option value="Bellandur"></option>
+                    <option value="Brigade Road"></option>
+                    <option value="Brookefield"></option>
+                    <option value="BTM"></option>
+                    <option value="Church Street"></option>
+                    <option value="Electronic City"></option>
+                    <option value="Frazer Town"></option>
+                    <option value="HSR"></option>
+                    <option value="Indiranagar"></option>
+                    <option value="JP Nagar"></option>
+                    <option value="Kalyan Nagar"></option>
+                    <option value="Jayanagar"></option>
+                    <option value="Kammanahalli"></option>
+                    <option value="Koramangala 5th Block"></option>
+                    <option value="Koramangala 7th Block"></option>
+                    <option value="Koramangala 4th Block"></option>
+                    <option value="Koramangala 6th Block"></option>
+                    <option value="Lavelle Road"></option>
+                    <option value="Marathahalli"></option>
+                    <option value="New BEL Road"></option>
+                    <option value="Residency Road"></option>
+                    <option value="Rajajinagar"></option>
+                    <option value="MG Road"></option>
+                    <option value="Whitefield"></option>
+                    <option value="Old Airport Road"></option>
+                    <option value="Malleshwaram"></option>
+                    <option value="Sarjapur Road"></option>
+        
+                </datalist>
+            
+                <input type="text" class="input-field" name="city" placeholder="Enter City" required list="cities"
+                    id="cityInput">
+                <datalist id="cities">
+                    <option value="Agra"></option>
+                    <option value="Ahmedabad"></option>
+                    <option value="Gandhinagar"></option>
+                    <option value="Ajmer"></option>
+                    <option value="Alappuzha"></option>
+                    <option value="Allahabad"></option>
+                    <option value="Amravati"></option>
+                    <option value="Amritsar"></option>
+                    <option value="Aurangabad"></option>
+                    <option value="Bangalore"></option>
+                    <option value="Bhopal"></option>
+                    <option value="Bhubaneshwar"></option>
+                    <option value="Chandigarh"></option>
+                    <option value="Mohali"></option>
+                    <option value="Panchkula"></option>
+                    <option value="Zirakpur"></option>
+                    <option value="Nayagaon"></option>
+                    <option value="Chennai"></option>
+                    <option value="Coimbatore"></option>
+                    <option value="Cuttack"></option>
+                    <option value="Darjeeling"></option>
+                    <option value="Dehradun"></option>
+                    <option value="New Delhi"></option>
+                    <option value="Gurgaon"></option>
+                    <option value="Noida"></option>
+                    <option value="Faridabad"></option>
+                    <option value="Ghaziabad"></option>
+                    <option value="Greater Noida"></option>
+                    <option value="Dharamshala"></option>
+                    <option value="Gangtok"></option>
+                    <option value="Goa"></option>
+                    <option value="Gorakhpur"></option>
+                    <option value="Guntur"></option>
+                    <option value="Guwahati"></option>
+                    <option value="Gwalior"></option>
+                    <option value="Haridwar"></option>
+                    <option value="Hyderabad"></option>
+                    <option value="Secunderabad"></option>
+                    <option value="Indore"></option>
+                    <option value="Jabalpur"></option>
+                    <option value="Jaipur"></option>
+                    <option value="Jalandhar"></option>
+                    <option value="Jammu"></option>
+                    <option value="Jamnagar"></option>
+                    <option value="Jamshedpur"></option>
+                    <option value="Jhansi"></option>
+                    <option value="Jodhpur"></option>
+                    <option value="Junagadh"></option>
+                    <option value="Kanpur"></option>
+                    <option value="Kharagpur"></option>
+                    <option value="Kochi"></option>
+                    <option value="Kolhapur"></option>
+                    <option value="Kolkata"></option>
+                    <option value="Howrah"></option>
+                    <option value="Kota"></option>
+                    <option value="Lucknow"></option>
+                    <option value="Ludhiana"></option>
+                    <option value="Madurai"></option>
+                    <option value="Manali"></option>
+                    <option value="Mangalore"></option>
+                    <option value="Manipal"></option>
+                    <option value="Udupi"></option>
+                    <option value="Meerut"></option>
+                    <option value="Mumbai"></option>
+                    <option value="Thane"></option>
+                    <option value="Navi Mumbai"></option>
+                    <option value="Mussoorie"></option>
+                    <option value="Mysore"></option>
+                    <option value="Nagpur"></option>
+                    <option value="Nainital"></option>
+                    <option value="Nasik"></option>
+                    <option value="Nashik"></option>
+                    <option value="Neemrana"></option>
+                    <option value="Ooty"></option>
+                    <option value="Palakkad"></option>
+                    <option value="Patiala"></option>
+                    <option value="Patna"></option>
+                    <option value="Puducherry"></option>
+                    <option value="Pune"></option>
+                    <option value="Pushkar"></option>
+                    <option value="Raipur"></option>
+                    <option value="Rajkot"></option>
+                    <option value="Ranchi"></option>
+                    <option value="Rishikesh"></option>
+                    <option value="Salem"></option>
+                    <option value="Shimla"></option>
+                    <option value="Siliguri"></option>
+                    <option value="Srinagar"></option>
+                    <option value="Surat"></option>
+                    <option value="Thrissur"></option>
+                    <option value="Tirupati"></option>
+                    <option value="Trichy"></option>
+                    <option value="Trivandrum"></option>
+                    <option value="Udaipur"></option>
+                    <option value="Varanasi"></option>
+                    <option value="Vellore"></option>
+                    <option value="Vijayawada"></option>
+                    <option value="Vizag"></option>
+                    <option value="Vadodara"></option>
+                </datalist>
+                <i class="bx bx-user"></i>
+            </div>
+            <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <button type="submit" class="submit"><a href="#clientsection"></a>Search </button>
+            </div>
+
+        </form>
+    </section>
+
+
+    <section id="clientsection">
+        {%block content %}
+        {%endblock%}
+    </section>
+
+    <footer>
+        <div class="center">All right service</div>
+    </footer>
+
+
+    <script>
+        // Add event listener to radio buttons
+        document.querySelectorAll('input[name="formType"]').forEach(function(radio) {
+          radio.addEventListener('change', function() {
+            // Change the form action based on the selected radio button
+            var formAction = this.value === 'location' ? '/locationsearch' : '/city';
+            document.getElementById('locationForm').action = formAction;
+      
+            // Toggle visibility of city and location inputs based on the selected radio button
+            document.getElementById('cityInput').style.display = this.value === 'city' ? 'block' : 'none';
+            document.getElementById('locationInput').style.display = this.value === 'location' ? 'block' : 'none';
+      
+            // Print the selected radio button's value to the console
+            console.log('Selected radio button: ', this.value);
+          });
+        });
+      </script>
+      
+
+
+
+</body>
+
+</html>

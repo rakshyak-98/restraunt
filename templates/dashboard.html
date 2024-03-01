@@ -1,28 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Login page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <link rel="stylesheet"media="screen and (max-width: 1170px)" href="Phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body>
-
-<div class="container">
-    <div class=" row justify-content-center">
-        <div class="col-sm-8">
-            <h2>user dashboard</h2>
-            <p><b>Name: </b> {{user.name }}</p>
-            <p><b>Email: </b> {{user.email }}</p>
-            <a href="/logout" class="btn btn-dark">Logout</a>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="../static/css/logo.png" alt="">
         </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#service">Services</a></li>
+            <li class="item"><a href="#clientsection">About Us</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+        <ul id="user">
+            <li class="item"><a href="/logout" ><div  id="user">Logout {{user.name }}</div></a></li>
+            
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="hometxt"> welcomee To Blise Bite</h1>
+        
+        <button class="btn" ><a href="#service">Find Restaurant</a></button>
+    </section>
+    <section id="service">
+        <h1 class="primary">Our Services</h1>
+        <div id="servicebox">
+            <div class="box">
+                <img src="../static/css/1.png" alt="">
+                <h2 class="secondary"><a class="boxul" href="/location">Location Locator</a></h2>
+                <p class="center">Discover Nearby Delights</p>
+            </div>
+            <div class="box">
+                <img src="../static/css/2.png" alt="">
+                <h2 class="secondary"><a class="boxul" href="/similarrestaurent">Similar Tastes</a></h2>
+                <p class="center"> Culinary Companions</div>
+            <div class="box">
+                <img src="../static/css/3.png" alt="">
+                <h2 class="secondary" ><a class="boxul" href="/rating">Ratings Roundup</a></h2>
+                <p class="center">Gastronomic Grades</div>
+            <div class="box">
+                <img src="../static/css/4.png" alt="">
+                <h2 class="secondary"><a class="boxul" href="/cuisine">Cuisine Quests</a></h2>
+                <p class="center">Flavorful Finds </div>
+        </div>
+    </section>
+   
 
-    </div>
+    <section id="contact">
+        <h1 class="primary">Contact Us </h1>
+        <div id="contactbox" class="container">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- <div class="formgroup">
+                    <label for="name">First Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                    
+                </div>
+                <div class="formgroup">
+                    <label for="name">Last Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                    
+                </div>
+                <div class="formgroup">
+                    <label for="name">Email:</label>
+                    <input type="text" name="name" id="Email" placeholder="Enter your Email">
+                </div>
+                <div class="formgroup">
+                    <label for="name">Phone Number:</label>
+                    <input type="text" name="name" id="NUmber" placeholder="Enter your Phone NUmber">
+                </div>
+                <div class="formgroup">
+                    <label for="name">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div> -->
+                <input type="hidden" name="access_key" value="5b7e77b4-3431-4056-9465-d3fe636b8e65">
+
+                <input type="text" name="name" id="firstname" placeholder="Enter your First name" required>
+                <input type="text" name="name" id="lastname" placeholder="Enter your Last name" required>
+                <input type="text" name="email" id="email" placeholder="Enter your Email" required>
+                <input type="text" name="name" id="phno" placeholder="Enter your Phoneno" required>
+                <!-- <h4>Type Your Message here</h4> -->
+                <textarea name="message" id="txtarea" cols="30" rows="10" placeholder="Type Your Message here" required></textarea>
+                <input type="submit" value="SEND THAT BITE" id="button" >
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            copyright &copy;www.myonlinemeal.com, All rights reserved!
+        </div>
+    </footer>
+    
   
-</div>
-
 </body>
 </html>
