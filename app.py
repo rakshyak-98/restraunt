@@ -174,3 +174,37 @@ def cuisinebased():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+def findBthSmallest (A, B):
+  # Import heapq module to use min-heap
+  import heapq
+  # Sort the array A in ascending order
+  A.sort()
+  # Initialize an empty min-heap to store the sums and indices
+  heap = []
+  # Loop over the array and generate the initial sums
+  for i in range(len(A) - 2):
+    left = i + 1
+    right = len(A) - 1
+    sum = A[i] + A[left] + A[right]
+    heapq.heappush(heap, (sum, i, left, right))
+    right -= 1
+  # Initialize a counter to keep track of how many elements we have popped from the heap
+  count = 0
+  # Repeat until we find the Bth smallest element or the heap is empty
+  while heap and count < B:
+    # Pop the top element of the heap and store it in ans
+    ans, i, left, right = heapq.heappop(heap)
+    # Increment the counter by one
+    count += 1
+    # If the counter is equal to B, we have found the answer and we can return it
+    if count == B:
+      return ans
+    # Otherwise, we need to generate more sums from the indices of the popped element
+    # If left + 1 < right, we can increment the left pointer by one and push the new sum to the heap
+    if left + 1 < right:
+      left += 1
+      sum = A[i] + A[left] + A[right]
+      heapq.heappush(heap, (sum, i, left, right))
+  # If the heap is empty and we have not found the Bth smallest element, we can return -1
+  return -1
