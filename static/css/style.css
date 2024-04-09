@@ -81,6 +81,7 @@
    background: #fff;
    text-align: center;
    width: 500px;
+   margin-left: 254px;
 }
 
 .form-container form h3{
@@ -135,4 +136,57 @@
    border-radius: 5px;
    font-size: 20px;
    padding:10px;
+}
+.primary{
+   font-size: 6.8rem;
+   padding: 25px;
+   text-align: center;
+   color: white;
+ 
+   
+   font-family: fantasy;
+  
+   right:-215px ;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   
+}
+
+.img{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.logo{
+   width: 124px;
+   height: auto;
+   position: relative;
+   margin-left: 149px;
+   top: 72px;
+   left: 37px;
+}
+.img p:nth-child(1){
+   color: transparent;
+   /* -webkit-text-stroke: 3px #333; */
+   filter: blur(3px);
+}
+.img p:nth-child(3){
+   color:rgb(255, 255, 255);
+   /* filter: drop-shadow(0 15px 15px #fff); */
+   z-index: 1;
+   /* text-shadow:-15px 15px rgb(0,0,0,0.2),15px -15px 15px rgba(255,255,255,0.2) ; */
+
+}
+.img p:nth-child(2){
+   color: #ea7ea2;
+   z-index: 2;
+   animation: animate 4s ease infinite;
+}
+@keyframes animate {
+   0%,100%{
+       clip-path: polygon(0% 48%, 12% 44%, 24% 49%, 43% 57%, 59% 56%, 73% 52%, 99% 44%, 100% 100%, 0% 100%);}
+       50%{
+           clip-path: polygon(0 54%, 15% 60%, 29% 62%, 42% 59%, 58% 51%, 78% 43%, 100% 51%, 100% 99%, 0 100%);
+
+   }
 }

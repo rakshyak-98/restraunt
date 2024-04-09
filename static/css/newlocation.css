@@ -33,7 +33,7 @@ body{
     opacity: 1.4;
 }
 #user{
-    margin-left: 117px;
+    margin-left: 217px;
 }
 
 #logo {
@@ -130,7 +130,8 @@ label{
 
 /* Client section */
 #clientsection {
-    background: url(pexels-chan-walrus-941861.jpg)no-repeat center center/cover;
+    /* background: url(pexels-chan-walrus-941861.jpg)no-repeat center center/cover; */
+    background: url(hikarinoshita-hikari-yv5xBdYv410-unsplash.jpg)no-repeat center center/cover;
 }
 
 html{
@@ -270,17 +271,19 @@ footer {
 table {
     width: 100%;
     border-collapse: collapse;
+    text-transform: capitalize;
 }
 
 th, td {
     padding: 8px;
     color: white;
     text-align: center;
-    border: 1px solid #030303;
+    /* border: 1px solid #030303; */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Optional: Add styles for table header */
 th {
-    background-color: #000000;
+    background-color:  rgba(0, 0, 0, 0.5);
     color: white;
 }

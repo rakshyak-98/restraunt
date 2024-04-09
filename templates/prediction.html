@@ -1,7 +1,7 @@
 {% extends "rating.html" %}
     {% block content %}
     
-        <h1 class="primary2">Rating Of {{ prediction_text}} Is {{ "%.2f"|format(prediction_rating|float)  }}</h1>
+        <h1 class="primary2">Rating Of {{ prediction_text}} Is {{ "%.2f"|format(prediction_rating|float)  }}/5</h1>
         <div onload="botScroll()">
             
         </div>
