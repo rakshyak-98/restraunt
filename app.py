@@ -171,9 +171,10 @@ def cuisinebased():
         user = User.query.filter_by(email=session['email']).first()
         return render_template('table1.html', user=user, table=a, prediction_text=format(cuisine))
 
-
+"""
 if __name__ == '__main__':
     app.run(debug=True)
+"""
 
 def findBthSmallest (A, B):
   # Import heapq module to use min-heap
