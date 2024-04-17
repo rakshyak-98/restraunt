@@ -1,163 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-*{
+* {
    font-family: 'Poppins', sans-serif;
-   margin:0; padding:0;
+   margin: 0;
+   padding: 0;
    box-sizing: border-box;
-   outline: none; border:none;
+   outline: none;
+   border: none;
    text-decoration: none;
 }
 
-.container{
+.container {
    min-height: 100vh;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding:20px;
+   padding: 20px;
    padding-bottom: 60px;
-   
+
 }
 
-.container .content{
+.container .content {
    text-align: center;
 }
 
-.container .content h3{
+.container .content h3 {
    font-size: 30px;
-   color:#333;
+   color: #333;
 }
 
-.container .content h3 span{
+.container .content h3 span {
    background: crimson;
-   color:#fff;
+   color: #fff;
    border-radius: 5px;
-   padding:0 15px;
+   padding: 0 15px;
 }
 
-.container .content h1{
+.container .content h1 {
    font-size: 50px;
-   color:#333;
+   color: #333;
 }
 
-.container .content h1 span{
-   color:crimson;
+.container .content h1 span {
+   color: crimson;
 }
 
-.container .content p{
+.container .content p {
    font-size: 25px;
    margin-bottom: 20px;
 }
 
-.container .content .btn{
+.container .content .btn {
    display: inline-block;
-   padding:10px 30px;
+   padding: 10px 30px;
    font-size: 20px;
    background: #333;
-   color:#fff;
-   margin:0 5px;
+   color: #fff;
+   margin: 0 5px;
    text-transform: capitalize;
 }
 
-.container .content .btn:hover{
+.container .content .btn:hover {
    background: crimson;
 }
 
-.form-container{
+.form-container {
    min-height: 100vh;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding:20px;
+   padding: 20px;
    padding-bottom: 60px;
    background: #eee;
    background-image: url(pexels-pixabay-326281.jpg);
    background-size: cover;
 }
 
-.form-container form{
-   padding:20px;
+.form-container form {
+   padding: 20px;
    border-radius: 5px;
-   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
    background: #fff;
    text-align: center;
    width: 500px;
    margin-left: 254px;
 }
 
-.form-container form h3{
+.form-container form h3 {
    font-size: 30px;
    text-transform: uppercase;
    margin-bottom: 10px;
-   color:#333;
+   color: #333;
 }
 
 .form-container form input,
-.form-container form select{
+.form-container form select {
    width: 100%;
-   padding:10px 15px;
+   padding: 10px 15px;
    font-size: 17px;
-   margin:8px 0;
+   margin: 8px 0;
    background: #eee;
    border-radius: 5px;
 }
 
-.form-container form select option{
+.form-container form select option {
    background: #fff;
 }
 
-.form-container form .form-btn{
+.form-container form .form-btn {
    background: #fbd0d9;
-   color:crimson;
+   color: crimson;
    text-transform: capitalize;
    font-size: 20px;
    cursor: pointer;
 }
 
-.form-container form .form-btn:hover{
+.form-container form .form-btn:hover {
    background: crimson;
-   color:#fff;
+   color: #fff;
 }
 
-.form-container form p{
+.form-container form p {
    margin-top: 10px;
    font-size: 20px;
-   color:#333;
+   color: #333;
 }
 
-.form-container form p a{
-   color:crimson;
+.form-container form p a {
+   color: crimson;
 }
 
-.form-container form .error-msg{
-   margin:10px 0;
+.form-container form .error-msg {
+   margin: 10px 0;
    display: block;
    background: crimson;
-   color:#fff;
+   color: #fff;
    border-radius: 5px;
    font-size: 20px;
-   padding:10px;
+   padding: 10px;
 }
-.primary{
+
+.primary {
    font-size: 6.8rem;
    padding: 25px;
    text-align: center;
    color: white;
- 
-   
-   font-family: fantasy;
-  
-   right:-215px ;
+
+
+   font-family: "Oswald", fantasy;
+   font-weight: bolder;
+
+   right: -215px;
    position: absolute;
-   transform: translate(-50%,-50%);
-   
+   transform: translate(-50%, -50%);
+
 }
 
-.img{
+.img {
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-.logo{
+
+.logo {
    width: 124px;
    height: auto;
    position: relative;
@@ -165,28 +171,36 @@
    top: 72px;
    left: 37px;
 }
-.img p:nth-child(1){
+
+.img p:nth-child(1) {
    color: transparent;
    /* -webkit-text-stroke: 3px #333; */
    filter: blur(3px);
 }
-.img p:nth-child(3){
-   color:rgb(255, 255, 255);
+
+.img p:nth-child(3) {
+   color: rgb(255, 255, 255);
    /* filter: drop-shadow(0 15px 15px #fff); */
    z-index: 1;
    /* text-shadow:-15px 15px rgb(0,0,0,0.2),15px -15px 15px rgba(255,255,255,0.2) ; */
 
 }
-.img p:nth-child(2){
+
+.img p:nth-child(2) {
    color: #ea7ea2;
    z-index: 2;
    animation: animate 4s ease infinite;
 }
+
 @keyframes animate {
-   0%,100%{
-       clip-path: polygon(0% 48%, 12% 44%, 24% 49%, 43% 57%, 59% 56%, 73% 52%, 99% 44%, 100% 100%, 0% 100%);}
-       50%{
-           clip-path: polygon(0 54%, 15% 60%, 29% 62%, 42% 59%, 58% 51%, 78% 43%, 100% 51%, 100% 99%, 0 100%);
+
+   0%,
+   100% {
+      clip-path: polygon(0% 48%, 12% 44%, 24% 49%, 43% 57%, 59% 56%, 73% 52%, 99% 44%, 100% 100%, 0% 100%);
+   }
+
+   50% {
+      clip-path: polygon(0 54%, 15% 60%, 29% 62%, 42% 59%, 58% 51%, 78% 43%, 100% 51%, 100% 99%, 0 100%);
 
    }
 }
