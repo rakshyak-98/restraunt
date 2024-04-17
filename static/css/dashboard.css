@@ -263,101 +263,68 @@ footer {
 
 }
 
-.container form {
-    width: 670px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    flex-wrap: wrap;
+#contact h1{
+    color: white;
 }
 
-.container form h1 {
-    color: #fff;
-    font-weight: 500;
-    margin-top: 20px;
-    width: 500px;
-    text-align: center;
-
+.container form {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
 }
 
 .container form input {
-    width: 290px;
-    height: 40px;
-    padding-left: 13px;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding: 10px 20px;
     outline: none;
-    font-size: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-right: 18px;
-    /* border: 2px solid #050505; */
-    margin-left: 1px;
-}
-
-.container form #email,
-.container form #phoneno {
-    margin-left: 1px;
-    margin-right: 37px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
 .container form input::placeholder {
     color: #050505;
-    ;
-
-}
-
-.container form #lastname,
-.container form #phoneno {
-    margin-left: 20px;
-
 }
 
 .container form textarea {
+    font-family: inherit;
+    grid-area: 3/span 2;
     background: none;
     border: none;
-    border: 2px solid #080808;
-    color: #fff;
+    border-radius: 5px;
     font-weight: 200;
     font-size: 15px;
     padding: 10px;
     outline: none;
-    min-width: 600px;
-    max-width: 600px;
-    max-height: 80px;
-    min-height: 80px;
-    margin-left: -10px
+    background-color: white;
 }
 
 textarea::-webkit-scrollbar {
     width: 1em;
-
 }
 
 textarea::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.5);
-
 }
 
 .container form #button {
+    grid-area: 4/span 2;
+    justify-self: center;
     border: none;
-    background: linear-gradient(270deg, #fffc42, #18b52a);
+    background-color: #38618C;
+    padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 20px;
     font-weight: 600;
     font-size: 20px;
-    color: #333;
-    width: 176px;
-    padding: 0;
-
+    color: white;
     margin-right: 15x;
     margin-bottom: 30px;
     transition: 0.3;
-
 }
 
 .container form #button:hover {
-    opacity: 0.7;
+    cursor: pointer;
+    background-color: #294666;
 }
