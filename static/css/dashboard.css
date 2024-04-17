@@ -31,7 +31,7 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 2;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* logo and image */
@@ -95,7 +95,7 @@ body {
     z-index: -1;
 }
 
-#home::after{
+#home::after {
     content: "";
     background: #222222;
     opacity: .3;
@@ -128,14 +128,13 @@ body {
 
 #servicebox {
     display: flex;
+    gap: 20px;
     justify-content: center;
 }
 
 #servicebox .box {
     border: 2px solid rgb(4, 4, 4);
-    margin: 10px 10px;
     padding: 19px;
-    width: 273px;
     border-radius: 10px;
 }
 
@@ -240,6 +239,10 @@ footer {
 .boxul {
     text-decoration: none;
     color: black;
+}
+
+.boxul:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .center {
