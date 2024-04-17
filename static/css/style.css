@@ -12,7 +12,6 @@
 }
 
 .container {
-   min-height: 100vh;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -70,11 +69,13 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-wrap: wrap;
    padding: 20px;
    padding-bottom: 60px;
    background: #eee;
    background-image: url(pexels-pixabay-326281.jpg);
    background-size: cover;
+   position: relative;
 }
 
 .form-container form {
@@ -84,7 +85,6 @@
    background: #fff;
    text-align: center;
    width: 500px;
-   margin-left: 254px;
 }
 
 .form-container form h3 {
@@ -141,20 +141,18 @@
    padding: 10px;
 }
 
-.primary {
+.primary{
    font-size: 6.8rem;
    padding: 25px;
    text-align: center;
    color: white;
-
-
    font-family: "Oswald", fantasy;
    font-weight: bolder;
+   white-space: nowrap;
+}
 
-   right: -215px;
+.primary:not(.primary:first-child) {
    position: absolute;
-   transform: translate(-50%, -50%);
-
 }
 
 .img {
@@ -165,11 +163,6 @@
 
 .logo {
    width: 124px;
-   height: auto;
-   position: relative;
-   margin-left: 149px;
-   top: 72px;
-   left: 37px;
 }
 
 .img p:nth-child(1) {
