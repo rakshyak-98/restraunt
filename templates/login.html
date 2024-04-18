@@ -1,45 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Login page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>login form</title>
-
-  
-  <!-- custom css file link  -->
-  <link rel="stylesheet" href="static/css/style.css">
-  <script text="text/javascript" src="../static/script/scroll.js"></script>
-  <!-- <link rel="icon" href="icon.ico"> -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../static/css/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../static/css/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../static/css/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="../static/css/favicon_io/site.webmanifest">
-</head>
-<body onload = "{{script}}">
-    <body>
-   
-        <div class="form-container">
-        
-           <form action="/login" method="post">
-              <h3>login now</h3>
-              
-              <input type="email" name="email" required placeholder="enter your email">
-              <input type="password" name="password" required placeholder="enter your password">
-              <input type="submit" name="submit" value="login now" class="form-btn">
-              <p>don't have an account? <a href="/register">register now</a></p>
-           </form>
-           <div class="container">
-            <div class="img">
-         <p class="primary">Blise Bite</p>
-         <p class="primary">Blise Bite</p>
-         <p class="primary">Blise Bite</p>
-         <img class="logo" src="../static/css/logo.png" alt="Image not found">
-        </div>
-           </div>
-        
-
-        </div>
-        
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Login Form{% endblock %}
+{% block content %}
+<div class="form-container">
+   <form action="/login" method="post">
+      <h3>login now</h3>
+      <input type="email" name="email" required placeholder="enter your email">
+      <input type="password" name="password" required placeholder="enter your password">
+      <input type="submit" name="submit" value="login now" class="form-btn">
+      <p>don't have an account? <a href="/register">register now</a></p>
+   </form>
+   <div class="img">
+      <p class="primary">Blise Bite</p>
+      <p class="primary">Blise Bite</p>
+      <p class="primary">Blise Bite</p>
+      <img class="logo" src="../static/css/logo.png" alt="Image not found">
+   </div>
+</div>
+{% endblock %}
