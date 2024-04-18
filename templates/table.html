@@ -1,8 +1,7 @@
 {% extends "newlocation.html" %}
-    {% block content %}
-    
-        <h1 class="primary2">Restaurant In {{ prediction_text}}</h1>
-        <div onload="botScroll()">
-            {{ table | safe }}
-        </div>
-    {% endblock %}
+{% block result %}
+<h1 class="primary2">Restaurant In {{ prediction_text}}</h1>
+<div onload="botScroll()">
+    {{ table | safe }}
+</div>
+{% endblock %}

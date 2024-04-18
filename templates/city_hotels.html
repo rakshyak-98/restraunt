@@ -1,37 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/styledashboard.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet">
-    <title>City Hotels</title>
-</head>
-<body>
-    <h1>City Hotels</h1>
-    <form action="/city" method="post">
-        <label for="city">Enter City Code:</label>
-        <input type="text" id="city" name="city" required>
-        <button type="submit">Search</button>
-    </form>
-    <div class="xyz">
-        <h2 class="pr">Prediction Result:</h2>
-        <br>
-        <div class="pri">
-             {{ prediction_text }}
-        </div>
-        <div>
-            <h1>Table from DataFrame</h1>
-            {{ table | safe }}
-        </div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}City Hotels{% endblock%}
+{% block content %}
+<h1>City Hotels</h1>
+<form action="/city" method="post">
+    <label for="city">Enter City Code:</label>
+    <input type="text" id="city" name="city" required>
+    <button type="submit">Search</button>
+</form>
+<div class="xyz">
+    <h2 class="pr">Prediction Result:</h2>
+    <br>
+    <div class="pri">
+        {{ prediction_text }}
+    </div>
+    <div>
+        <h1>Table from DataFrame</h1>
+        {{ table | safe }}
+    </div>
+</div>
+{% endblock %}

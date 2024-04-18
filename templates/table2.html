@@ -1,6 +1,6 @@
 {% extends "similarrestaurent.html" %}
-    {% block content %}
-    
+    {% block result %}
+
         <h1 class="primary2">Similar Restaurant Like {{ prediction_text}}</h1>
         <div onload="botScroll()">
             {{ table | safe }}
