@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-:root {
-    --font-family: 'Oswald', 'Dancing Script', cursive;
-}
-
 /* css reset */
 * {
     margin: 0;
@@ -14,90 +10,77 @@
 /* css variables */
 :root {
     --navheight: 59px;
+    --font-family: 'Oswald', 'Dancing Script', cursive;
+    --clr-primary: #38618C;
+    --clr-btn-text: #FFFFFF;
 }
 
 body {
     background-color: white;
+    font-family: var(--font-family);
 }
 
 /* navigation bar */
 #navbar {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 100%;
-    position: sticky;
-    top: 3px;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#navbar::before {
-    content: "";
-    /* background-color: black; */
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 1.4;
-}
-
-#user {
-    margin-left: 217px;
-}
-
-#logo {
-    margin: -15px 0px;
-}
-
+/* logo and image */
 #logo img {
     height: 56px;
-    margin: 29px 30px;
 }
 
 #navbar ul {
     display: flex;
-    font-family: 'Dancing Script', cursive;
-    position: relative;
-    top: -4px;
-    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Oswald', 'Dancing Script', cursive;
+    justify-content: center;
+    gap: 3em;
 }
 
 #navbar ul li {
-    /* color: white; */
     list-style: none;
     font-size: 2.3rem;
 
 }
 
 #navbar ul li a {
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    color: rgb(21, 220, 10);
+    color: #F5F5F5;
     text-decoration: none;
+    position: relative;
 }
 
-
-#navbar ul li a:hover {
-    color: rgba(255, 96, 96, 0.589);
+#navbar a:hover,
+#navbar a:focus {
+    color: #ADADAD;
 }
 
-#user {
-    color: rgb(0, 0, 0);
-}
-
-#user :hover {
-    color: #e70606;
+#navbar a:hover::after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 }
 
 /* home Section */
 #home {
     display: flex;
     flex-direction: column;
-    padding: 15px 200px;
     justify-content: center;
     align-items: center;
-    height: 688px;
-    /* border: 2px solid black; */
+    height: 100vh;
 }
 
 #home::before {
@@ -114,17 +97,7 @@ body {
 
 #home h1 {
     color: white;
-    text-align: center;
 }
-
-#home p {
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 
 /* Client section */
 #clientsection {
@@ -135,6 +108,11 @@ body {
 html {
     scroll-behavior: smooth;
     /*for smooth scrolling */
+}
+
+.input-box{
+ display: flex;
+ gap: 2px;
 }
 
 #client {
@@ -166,25 +144,16 @@ footer {
 /* Utility classes  */
 .primary {
     font-size: 3.8rem;
-    padding: 25px;
-    top: -83px;
-    position: relative;
-    text-align: center;
 }
 
 .primary1 {
     font-size: 1.8rem;
-    /* padding: 25px; */
     text-align: center;
-    position: relative;
-    top: -74px;
 }
 
 .primary2 {
     font-size: 3.8rem;
-    padding: 25px;
     text-align: center;
-    color: white;
 }
 
 .secondary {
@@ -194,14 +163,10 @@ footer {
 }
 
 .btn {
-    top: 42px;
-    padding: 6px 20px;
     border: 2px solid white;
     background-color: black;
     color: white;
     margin: 17px;
-    position: relative;
-    /* font: 1.5rem; */
     border-radius: 16px;
     cursor: pointer;
 }
@@ -212,19 +177,15 @@ footer {
     color: white;
 }
 
-
 .input-field {
-    font-size: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    height: 50px;
-    width: 150%;
-    right: 58px;
-    top: -34px;
-    position: relative;
-    padding: 0 10px 0 45px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 36px;
+    background: #F5F5F5;
+    color: inherit;
+    padding:8px 20px;
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
     outline: none;
     transition: .2s ease;
 }
@@ -238,26 +199,20 @@ footer {
     color: #fff;
 }
 
-.input-box i {
-    position: relative;
-    top: -35px;
-    left: 17px;
-    color: #fff;
+#home form{
+    width: 30%;
 }
 
 .submit {
-    top: 6px;
-    right: -54px;
-    font-size: 15px;
+    font-family: inherit;
+    padding: 8px 20px;
+    font-size: 36px;
     font-weight: 500;
-    color: black;
-    height: 44px;
-    position: relative;
-    width: 51%;
+    color: var(--clr-btn-text);
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
     outline: none;
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--clr-primary);
     cursor: pointer;
     transition: .3s ease-in-out;
 }
