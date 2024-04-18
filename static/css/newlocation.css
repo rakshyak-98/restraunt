@@ -16,85 +16,55 @@ body {
 
 /* navigation bar */
 #navbar {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 100%;
-    position: sticky;
-    top: 3px;
-}
-
-#navbar::before {
-    content: "";
-    /* background-color: black; */
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 1.4;
-}
-
-#user {
-    margin-left: 217px;
-}
-
-#logo {
-    margin: -15px 0px;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #logo img {
     height: 56px;
-    margin: 29px 30px;
 }
 
 #navbar ul {
     display: flex;
-    font-family: 'Dancing Script', cursive;
-    position: relative;
-    top: -4px;
-    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Oswald', 'Dancing Script', cursive;
+    justify-content: center;
+    gap: 3em;
 }
 
 #navbar ul li {
-    /* color: white; */
     list-style: none;
     font-size: 2.3rem;
 
 }
 
 #navbar ul li a {
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    color: rgb(21, 220, 10);
+    color: #F5F5F5;
     text-decoration: none;
-}
-
-
-#navbar ul li a:hover {
-    color: rgba(255, 96, 96, 0.589);
-}
-
-#user {
-    color: rgb(0, 0, 0);
-}
-
-#user :hover {
-    color: #e70606;
-}
-
-.radio-box {
-    display: flex;
     position: relative;
-    bottom: 54px;
-    justify-content: center;
-
 }
 
-label {
-    display: flex;
-    justify-content: center;
-    margin-right: 23px;
+#navbar a:hover,
+#navbar a:focus {
+    color: #ADADAD;
+}
+
+#navbar a:hover::after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 }
 
 /* home Section */
