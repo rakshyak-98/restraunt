@@ -7,10 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/dashboard.css">
-    <link rel="stylesheet" href="../static/css/similarrestaurent.css">
-    <link rel="stylesheet" href="../static/css/cuisine.css">
-    <link rel="stylesheet" href="../static/css/locationbased.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap"
@@ -25,6 +21,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../static/css/newlocation.css">
     <script text="text/javascript" src="../static/script/scroll.js"></script>
+
+    <!-- <link rel="icon" href="icon.ico"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/css/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/css/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/css/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../static/css/favicon_io/site.webmanifest">
 </head>
 
 <body>
@@ -41,30 +43,29 @@
     <script>
         // Add event listener to radio buttons
         (() => {
-            if (document.title === "Location")
-                document.querySelectorAll('input[name="formType"]').forEach(function (radio) {
-                    radio.addEventListener('change', function () {
-                        // Change the form action based on the selected radio button
-                        var formAction = this.value === 'location' ? '/locationsearch' : '/city';
-                        document.getElementById('locationForm').action = formAction;
-                        // Toggle visibility of city and location inputs based on the selected radio button
-                        if (this.value === 'city') {
-                            document.getElementById('cityInput').style.display = 'block';
-                            document.getElementById('cityInput').required = true;
-                        } else {
-                            document.getElementById('cityInput').style.display = 'none';
-                            document.getElementById('cityInput').required = false;
-                        }
-                        if (this.value === 'location') {
-                            document.getElementById('locationInput').style.display = 'block';
-                            document.getElementById('locationInput').required = true;
-                            document.getElementById('locationInput').style.display = 'none';
-                            document.getElementById('locationInput').required = false;
-                            // Print the selected radio button's value to the console
-                            console.log('Selected radio button: ', this.value);
-                        }
-                    });
+            document.querySelectorAll('input[name="formType"]').forEach(function (radio) {
+                radio.addEventListener('change', function () {
+                    // Change the form action based on the selected radio button
+                    var formAction = this.value === 'location' ? '/locationsearch' : '/city';
+                    document.getElementById('locationForm').action = formAction;
+                    // Toggle visibility of city and location inputs based on the selected radio button
+                    if (this.value === 'city') {
+                        document.getElementById('cityInput').style.display = 'block';
+                        document.getElementById('cityInput').required = true;
+                    } else {
+                        document.getElementById('cityInput').style.display = 'none';
+                        document.getElementById('cityInput').required = false;
+                    }
+                    if (this.value === 'location') {
+                        document.getElementById('locationInput').style.display = 'block';
+                        document.getElementById('locationInput').required = true;
+                        document.getElementById('locationInput').style.display = 'none';
+                        document.getElementById('locationInput').required = false;
+                        // Print the selected radio button's value to the console
+                        console.log('Selected radio button: ', this.value);
+                    }
                 });
+            });
         })()
     </script>
 </body>

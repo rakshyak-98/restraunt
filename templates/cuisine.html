@@ -2,14 +2,14 @@
 {% block title %}Restaurant Recommendation{% endblock %}
 {% block content %}
 {% include 'navbar.html' %}
-<section id="home">
-    <h1 class="primary"> welcomee To Cuisine Quests</h1>
-    <h1 class="primary1">Discover the best food & drinks </h1>
+<section id="home" class="home--valeria">
+    <h1 class="primary"> Cuisine Quests</h1>
     <!------------------- login form -------------------------->
     <form action="/cuisinebased" method="post">
         <div class="input-box">
             <input type="cuisine" class="input-field" name="cuisine" placeholder="Enter cuisine Name" required
                 list="script">
+            <button type="submit" class="submit"><a href="#clientsection"></a>Search </button>
             <datalist id="script">
                 <option value="north indian, mughlai, chinese"></option>
                 <option value="chinese, north indian, thai"></option>
@@ -1025,9 +1025,6 @@
 
             </datalist>
             <i class="bx bx-user"></i>
-        </div>
-        <div class="input-box">
-            <button type="submit" class="submit"><a href="#clientsection"></a>Search </button>
         </div>
     </form>
 </section>
