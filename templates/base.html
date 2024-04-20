@@ -57,11 +57,12 @@
                     if (this.value === 'location') {
                         document.getElementById('locationInput').style.display = 'block';
                         document.getElementById('locationInput').required = true;
+                    } else {
                         document.getElementById('locationInput').style.display = 'none';
                         document.getElementById('locationInput').required = false;
-                        // Print the selected radio button's value to the console
-                        console.log('Selected radio button: ', this.value);
                     }
+                    // Print the selected radio button's value to the console
+                    console.log('Selected radio button: ', this.value);
                 });
             });
         })()

@@ -347,7 +347,22 @@ footer {
 }
 
 button[type="submit"] {
-    background-color: #38618C;
+    background-color: var(--clr-primary);
+    border-radius: 5px;
+    border: none;
+    color: var(--clr-btn-text);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 36px;
+    font-weight: 500;
+    outline: none;
+    padding: 8px 20px;
+    transition: .3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
 .input-field {
@@ -379,25 +394,6 @@ button[type="submit"] {
     color: #fff;
 }
 
-.submit {
-    background: var(--clr-primary);
-    background: var(--color-primary);
-    border-radius: 5px;
-    border: none;
-    color: var(--clr-btn-text);
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 36px;
-    font-weight: 500;
-    outline: none;
-    padding: 8px 20px;
-    transition: .3s ease-in-out;
-}
-
-.submit:hover {
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
-}
 
 
 table {
@@ -432,18 +428,11 @@ body {
     --navbar-height: 40px;
 }
 
-/* logo and image */
 nav ul {
     display: flex;
     font-family: 'Oswald', 'Dancing Script', cursive;
     justify-content: center;
     gap: 3em;
-}
-
-nav ul li a {
-    color: #F5F5F5;
-    text-decoration: none;
-    position: relative;
 }
 
 nav a:hover::after {
@@ -624,21 +613,6 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 
-nav ul {
-    display: flex;
-    font-family: 'Dancing Script', cursive;
-    position: relative;
-    top: -4px;
-}
-
-nav ul li a {
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    color: rgb(21, 220, 10);
-    text-decoration: none;
-}
-
 /* home Section */
 
 /* Client section */
@@ -775,19 +749,9 @@ th {
 
 /* navigation bar */
 
-nav ul {
-    display: flex;
-    font-family: 'Dancing Script', cursive;
-    position: relative;
-    top: -4px;
-    /* font-family: 'Indie Flower', cursive; */
-}
-
 nav ul li a {
     display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    color: rgb(21, 220, 10);
+    color: white;
     text-decoration: none;
 }
 
@@ -936,20 +900,6 @@ nav {
 }
 
 /* logo and image */
-
-nav ul {
-    display: flex;
-    font-family: 'Oswald', 'Dancing Script', cursive;
-    justify-content: center;
-    gap: 3em;
-}
-
-nav ul li a {
-    color: #F5F5F5;
-    text-decoration: none;
-    position: relative;
-}
-
 
 nav a:hover::after {
     display: inline-block;
