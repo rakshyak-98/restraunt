@@ -3,6 +3,9 @@
 
 :root {
     --navheight: 59px;
+    --font-family: 'Oswald', 'Dancing Script', cursive;
+    --clr-primary: #38618C;
+    --clr-btn-text: #FFFFFF;
 }
 
 * {
@@ -23,7 +26,6 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
 
 .center {
     text-align: center;
@@ -215,8 +217,8 @@ nav .logo {
 }
 
 /* navigation bar */
-nav.logo {
-    width: 64px;
+.logo {
+    width: 128px;
 }
 
 nav:has(li),
@@ -225,6 +227,7 @@ nav ul:has(li) {
     list-style: none;
     font-size: 32px;
 }
+
 nav a:hover,
 nav a:focus {
     color: #ECEBE9;
@@ -238,16 +241,6 @@ nav::before {
     width: 100%;
     z-index: -1;
     opacity: 1.4;
-}
-
-/* logo and image */
-#logo {
-    margin: -15px 0px;
-}
-
-#logo img {
-    height: 56px;
-    margin: 29px 30px;
 }
 
 /* home Section */
@@ -280,11 +273,6 @@ nav::before {
 
 .home--lisa-fotios-bg::before {
     background: url(pexels-lisa-fotios-776538.jpg) no-repeat;
-}
-
-#home h1 {
-    color: white;
-    text-align: center;
 }
 
 #home p {
@@ -356,6 +344,10 @@ footer {
     position: relative;
     border-radius: 16px;
     cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #38618C;
 }
 
 .input-field {
@@ -441,10 +433,6 @@ body {
 }
 
 /* logo and image */
-#logo img {
-    height: 56px;
-}
-
 nav ul {
     display: flex;
     font-family: 'Oswald', 'Dancing Script', cursive;
@@ -489,7 +477,6 @@ nav a:hover::after {
     color: #EBEBEB;
     font-size: 10.8rem;
     text-align: center;
-    margin-bottom: 60px;
 }
 
 /* services section */
@@ -636,9 +623,6 @@ textarea::-webkit-scrollbar-thumb {
     background-color: #294666;
 }
 
-#logo {
-    margin: -15px 0px;
-}
 
 nav ul {
     display: flex;
@@ -695,9 +679,6 @@ body {
     font-family: var(--font-family);
 }
 
-#logo img {
-    height: 56px;
-}
 
 /* home Section */
 
@@ -750,10 +731,6 @@ body {
 .radio-box label {
     display: flex;
     gap: 10px;
-}
-
-#locationForm {
-    width: 30%;
 }
 
 #locationForm>*:not(:last-child) {
@@ -815,11 +792,6 @@ nav ul li a {
 }
 
 /* home Section */
-
-#home h1 {
-    color: white;
-    text-align: center;
-}
 
 #home p {
     color: white;
@@ -949,12 +921,6 @@ th {
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 /* css variables */
-:root {
-    --navheight: 59px;
-    --font-family: 'Oswald', 'Dancing Script', cursive;
-    --clr-primary: #38618C;
-    --clr-btn-text: #FFFFFF;
-}
 
 /* navigation bar */
 nav {
@@ -970,9 +936,6 @@ nav {
 }
 
 /* logo and image */
-#logo img {
-    height: 56px;
-}
 
 nav ul {
     display: flex;
@@ -1002,10 +965,6 @@ nav a:hover::after {
 
 /* home Section */
 
-
-#home h1 {
-    color: white;
-}
 
 /* Client section */
 #clientsection {
@@ -1084,11 +1043,6 @@ footer {
 ::-webkit-input-placeholder {
     color: #fff;
 }
-
-#home form {
-    width: 30%;
-}
-
 
 .text {
     position: relative;
