@@ -369,12 +369,11 @@ nav .logo {
     /* css reset */
 }
 
-
 .input-field {
     background: #F5F5F5;
     border-radius: 5px;
     border: none;
-    color: inherit;
+    color: black;
     font-family: inherit;
     font-size: 36px;
     outline: none;
