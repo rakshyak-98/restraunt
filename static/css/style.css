@@ -284,8 +284,48 @@ nav::before {
     white-space: nowrap;
 }
 
+.primary1 {
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+    top: -74px;
+}
+
+.primary2 {
+    font-size: 3.8rem;
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
 .primary:not(.primary:first-child) {
     position: absolute;
+}
+
+.secondary {
+    font-size: 1.8rem;
+    padding: 12px;
+    text-align: center;
+}
+
+#client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#client img {
+    height: 144px;
+}
+
+.client-item {
+    padding: 40px 40px;
+}
+
+#clientsection {
+    background: url(pexels-chan-walrus-941861.jpg)no-repeat center center/cover;
+    background: url(hikarinoshita-hikari-yv5xBdYv410-unsplash.jpg) no-repeat center center/cover;
+    background: url(hikarinoshita-hikari-yv5xBdYv410-unsplash.jpg)no-repeat center center/cover;
 }
 
 .img {
@@ -327,49 +367,6 @@ nav .logo {
     }
 
     /* css reset */
-}
-
-#clientsection {
-    background: url(hikarinoshita-hikari-yv5xBdYv410-unsplash.jpg) no-repeat center center/cover;
-}
-
-#client {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#client img {
-    height: 144px;
-}
-
-#client img {
-    height: auto;
-}
-
-.client-item {
-    padding: 40px 40px;
-}
-
-.primary1 {
-    font-size: 1.8rem;
-    /* padding: 25px; */
-    text-align: center;
-    position: relative;
-    top: -74px;
-}
-
-.primary2 {
-    font-size: 3.8rem;
-    padding: 25px;
-    text-align: center;
-    color: white;
-}
-
-.secondary {
-    font-size: 1.8rem;
-    padding: 12px;
-    text-align: center;
 }
 
 
@@ -581,10 +578,6 @@ button[type="submit"]:hover {
 
 /* home Section */
 
-/* Client section */
-#clientsection {
-    background: url(pexels-chan-walrus-941861.jpg)no-repeat center center/cover;
-}
 
 
 
@@ -604,27 +597,10 @@ body {
 }
 
 /* Client section */
-#clientsection {
-    background: url(hikarinoshita-hikari-yv5xBdYv410-unsplash.jpg)no-repeat center center/cover;
-}
+
 
 /* Utility classes  */
 
-.primary1 {
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-.primary2 {
-    font-size: 3.8rem;
-    text-align: center;
-    color: white;
-}
-
-.secondary {
-    font-size: 1.8rem;
-    text-align: center;
-}
 
 
 .radio-box {
@@ -698,57 +674,20 @@ nav ul li a {
 
 
 /* Client section */
-#clientsection {
-    background: url(pexels-chan-walrus-941861.jpg)no-repeat center center/cover;
-}
+
 
 html {
     scroll-behavior: smooth;
     /*for smooth scrolling */
 }
 
-#client {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#client img {
-    height: 144px;
-}
-
-#client img {
-    height: auto;
-}
-
-.client-item {
-    padding: 40px 40px;
-}
 
 /* Utility classes  */
 
 
 
-.primary1 {
-    font-size: 1.8rem;
-    /* padding: 25px; */
-    text-align: center;
-    position: relative;
-    top: -74px;
-}
 
-.primary2 {
-    font-size: 3.8rem;
-    padding: 25px;
-    text-align: center;
-    color: white;
-}
 
-.secondary {
-    font-size: 1.8rem;
-    padding: 12px;
-    text-align: center;
-}
 
 .input-field:hover,
 .input-field:focus {
@@ -827,51 +766,18 @@ nav a:hover::after {
 
 
 /* Client section */
-#clientsection {
-    /* background: url(pexels-chan-walrus-941861.jpg)no-repeat center center/cover; */
-    background: url(hikarinoshita-hikari-yv5xBdYv410-unsplash.jpg)no-repeat center center/cover;
-}
+
 
 html {
     scroll-behavior: smooth;
     /*for smooth scrolling */
 }
 
-#client {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#client img {
-    height: 144px;
-}
-
-#client img {
-    height: auto;
-}
-
-.client-item {
-    padding: 40px 40px;
-}
 
 /* Utility classes  */
 
-.primary1 {
-    font-size: 1.8rem;
-    text-align: center;
-}
 
-.primary2 {
-    font-size: 3.8rem;
-    text-align: center;
-}
 
-.secondary {
-    font-size: 1.8rem;
-    padding: 12px;
-    text-align: center;
-}
 
 .input-field:hover,
 .input-field:focus {
